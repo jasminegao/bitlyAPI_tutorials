@@ -16,4 +16,4 @@ response = requests.get(endpoint, params = query_params)
     
 data = json.loads(response.content)
 
-pprint.pprint(data['data']['results'])
+pprint.pprint(data['data']['results'], indent = 3)
