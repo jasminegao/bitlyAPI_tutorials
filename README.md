@@ -24,7 +24,7 @@ Endpoint: [/v3/realtime/bursting_phrases](http://dev.bitly.com/data_apis.html#v3
 ----------------------------------------------------------
 Endpoint: [/v3/search](http://dev.bitly.com/data_apis.html#v3_search)
 
-<a id="info"></a>Get info on a link
+<a id="info"></a>Get info on a bitly link
 ------------------------------------
 Endpoint: [/v3/link/info](http://dev.bitly.com/links.html#v3_info)
 
@@ -36,7 +36,7 @@ Endpoint: [/v3/link/clicks](http://dev.bitly.com/link_metrics.html#v3_link_click
 ----------------------------------------
 Endpoint: [/v3/bundle/create](http://dev.bitly.com/bundles.html#v3_bundle_create)
 
-<a id="addlinktobundle"></a>Add a link to bundle
+<a id="addlinktobundle"></a>Add a link to a bundle
 ------------------------------------------------
 Endpoint: [/v3/bundle/link_add](http://dev.bitly.com/bundles.html#v3_bundle_link_add)
 
