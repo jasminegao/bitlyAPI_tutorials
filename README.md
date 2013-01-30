@@ -3,10 +3,19 @@ bitlyAPI_tutorials
 
 The following are simple tutorials to help get you started on using bitly's APIs. Before you begin, it is assumed you have registered an application and generated an access token. If not, you can visit our [OAuth documentation](http://dev.bitly.com/authentication.html) for a walkthrough of the authentication process. 
 
-Shortening a link
-------------------------------------------------------------------
+Listed are tutorials to perform the following:
 
-This tutorial will guide you through performing what bitly is most well known for: shortening a link and returning data on it. 
+[Shortening a link](#shorten)
+[Finding the categories of a webpage](#categories)
+[Getting the number of clicks on a link](#clicks)
+[Returning phrases/keywords bursting in popularity](#bursting)
+[Searching all bitly links receiving clicks](#search)
+[Creating a bundle](#createbundle)
+[Adding a link to a bundle](#addlinktobundle)
+
+
+<a id="shorten"></a>Shortening a link
+------------------------------------------------------------------ 
 
 To shorten a link, you simply connect to the [/v3/shorten](http://dev.bitly.com/links.html#v3_shorten) endpoint and pass a webpage link as the `'longUrl'` parameter:
 
@@ -29,7 +38,7 @@ print data['data']['url']
 ```
 In the above code, the JSON response is a dictionary with several values and we print out just the short url found in the `['data']['url']` key. 
 
-Finding the categoires of a webpage
+<a id="categories"></a>Finding the categoires of a webpage
 ------------------------------------------------------------------
 
 A webpage can be about food, technology, entertainment or just about anything. At bitly, we label each webpage with the categories it's most likely to fall under. To return the categories of a webpage, you can use a method similar to shortening a link by connecting to the [/v3/link/category](http://dev.bitly.com/data_apis.html#v3_link_category) endpoint and passing a bitly short url as the `'link'` parameter:
@@ -47,7 +56,7 @@ print data['data']['categories']
 ```
 Here, we use the short url found in the JSON response of the previous example as the `'link'` parameter (however, you may also simply pass any bitly short url like so: `'link': "http://bitly.com/RYYpZT"`) and print out the detected categories for the page in descending order of confidence. 
 
-Getting the number of clicks on a bitly link
+<a id="clicks"></a>Getting the number of clicks on a bitly link
 ------------------------------------------------------------------
 
 Did you know you could view the stats for any bitly link by adding a plus sign (+) to the end of it (like this: http://bitly.com/RYYpZT+)? It's just as easy to get the stats and, more specifically, the number of clicks on a bitly link programmatically as well. All you have to do is connect to the  [/v3/link/clicks](http://dev.bitly.com/link_metrics.html#v3_link_clicks) endpoint and pass a bitly short url as the `'link'` parameter:
