@@ -60,7 +60,7 @@ data = json.loads(response.content)
 print data['data']['link_clicks']
 ```
 In the above code, we also made use of two new parameters unique to the /v3/link/clicks endpoint: `unit` and `units` which specify the 
-units of time to query data for. As a result, the number of clicks on the short url in past 60 minutes are printed. 
+measure and period, respectively, of time to query data for. As a result, the number of clicks on http://bitly.com/RYYpZT in past 60 minutes are printed. 
 
 <a id="bursting"></a>Return bursting phrases
 --------------------------------------------
