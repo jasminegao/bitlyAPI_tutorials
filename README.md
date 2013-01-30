@@ -5,14 +5,13 @@ The following are simple tutorials to help get you started on using bitly's APIs
 
 Listed are tutorials to perform the following:
 
-[Shortening a link](#shorten)
-[Finding the categories of a webpage](#categories)
-[Getting the number of clicks on a link](#clicks)
-[Returning phrases/keywords bursting in popularity](#bursting)
-[Searching all bitly links receiving clicks](#search)
-[Creating a bundle](#createbundle)
-[Adding a link to a bundle](#addlinktobundle)
-
+* Shortening a link
+* Finding the categories of a webpage
+* Getting the number of clicks on a link
+* Returning phrases/keywords bursting in popularity
+* Searching all bitly links receiving clicks
+* Creating a bundle
+* Adding a link to a bundle
 
 <a id="shorten"></a>Shortening a link
 ------------------------------------------------------------------ 
