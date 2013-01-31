@@ -16,7 +16,7 @@ Listed are tutorials to perform the following:
 <a id="shorten"></a>Shortening a link
 ------------------------------------------------------------------ 
 
-To shorten a link, you simply connect to the [/v3/shorten](http://dev.bitly.com/links.html#v3_shorten) endpoint and pass a webpage link as the `'longUrl'` parameter:
+To shorten a link, you simply connect to the [/v3/shorten](http://dev.bitly.com/links.html#v3_shorten) endpoint and pass a webpage link as the `longUrl` parameter:
 
 ```python
 import requests
@@ -41,7 +41,7 @@ In the above code, the JSON response is a dictionary with several values and we 
 <a id="categories"></a>Finding the categories of a webpage
 ------------------------------------------------------------------
 
-A webpage can be about food, technology, entertainment or just about anything. At bitly, we label each webpage with the categories it's most likely to fall under. To return the categories of a webpage, you can use a method similar to shortening a link by connecting to the [/v3/link/category](http://dev.bitly.com/data_apis.html#v3_link_category) endpoint and passing a bitly short url as the `'link'` parameter:
+A webpage can be about food, technology, entertainment or just about anything. At bitly, we label each webpage with the categories it's most likely to fall under. To return the categories of a webpage, you can use a method similar to shortening a link by connecting to the [/v3/link/category](http://dev.bitly.com/data_apis.html#v3_link_category) endpoint and passing a bitly short url as the `link` parameter:
 
 ```python
 import requests
@@ -60,12 +60,12 @@ data = json.loads(response.content)
 
 print data['data']['categories']
 ```
-Here, we use the short url found in the JSON response of the previous example as the `'link'` parameter (however, you may also simply pass any bitly short url like so: `'link': "http://bitly.com/RYYpZT"`) and print out the detected categories for the page in descending order of confidence. 
+Here, we use the short url found in the JSON response of the previous example as the `link` parameter (however, you may also simply pass any bitly short url like so: `'link': "http://bitly.com/RYYpZT"`) and print out the detected categories for the page in descending order of confidence. 
 
 <a id="clicks"></a>Getting the number of clicks on a bitly link
 ------------------------------------------------------------------
 
-Did you know you could view the stats for any bitly link by adding a plus sign (+) to the end of it (like this: http://bitly.com/RYYpZT+)? It's just as easy to get the stats and, more specifically, the number of clicks on a bitly link programmatically as well. All you have to do is connect to the  [/v3/link/clicks](http://dev.bitly.com/link_metrics.html#v3_link_clicks) endpoint and pass a bitly short url as the `'link'` parameter:
+Did you know you could view the stats for any bitly link by adding a plus sign (+) to the end of it (like this: http://bitly.com/RYYpZT+)? It's just as easy to get the stats and, more specifically, the number of clicks on a bitly link programmatically as well. All you have to do is connect to the  [/v3/link/clicks](http://dev.bitly.com/link_metrics.html#v3_link_clicks) endpoint and pass a bitly short url as the `link` parameter:
 
 ```python
 import requests
