@@ -2,7 +2,7 @@ import requests
 import json
 import pprint
 
-ACCESS_TOKEN = "53a01f38b09c0463cb9e2b35b151beb127843bf3"
+ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
 
 def getBurstingPhrases():
     query_params = {'access_token': ACCESS_TOKEN}

@@ -2,12 +2,12 @@ import requests
 import json
 import pprint
 
-ACCESS_TOKEN = "53a01f38b09c0463cb9e2b35b151beb127843bf3"
+ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
 
 query_params = {
     'access_token': ACCESS_TOKEN,
-	'bundle_link': "http://bitly.com/bundles/jasminegao/k",
-    'link': raw_input("Enter a bitly short url or long url that you want added to this bundle: ")}
+	'bundle_link': "http://bitly.com/bundles/bitlyapitutorials/1",
+    'link': "http://thoughtcatalog.com/2012/how-to-hack-chipotle/"}
 	
 endpoint = "https://api-ssl.bitly.com/v3/bundle/link_add"
 response = requests.get(endpoint, params = query_params)
