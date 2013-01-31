@@ -8,7 +8,7 @@ Listed are tutorials to perform the following:
 * Shortening a link
 * Finding the categories of a webpage
 * Getting the number of clicks on a link
-* Returning phrases/keywords bursting in popularity
+* Returning phrases bursting in popularity
 * Searching all bitly links receiving clicks
 * Creating a bundle
 * Adding a link to a bundle
@@ -76,13 +76,69 @@ print data['data']['link_clicks']
 In this example, we made use of two new parameters unique to the /v3/link/clicks endpoint: `unit` and `units` which specify the 
 measure and period, respectively, of time to query data for. As a result, the number of clicks on `http://bitly.com/RYYpZT` in past 60 minutes are printed. 
 
-<a id="bursting"></a>Return bursting phrases
---------------------------------------------
-Endpoint: [/v3/realtime/bursting_phrases](http://dev.bitly.com/data_apis.html#v3_realtime_bursting_phrases)
+<a id="bursting"></a>Returning phrases bursting in popularity
+----------------------------------------------------------------------
+
+When webpages containing the same phrase(s) receieve uncharacteristically high click traffic, we say the phrase(s) is bursting. This gives us a good idea of what the internet is paying attention to. To find out what phrases are currently bursting and which links are driving traffic to webpages containing those phrases, you can use the [/v3/realtime/bursting_phrases](http://dev.bitly.com/data_apis.html#v3_realtime_bursting_phrases) endpoint. 
+
+```python
+import requests
+import json
+import pprint
+
+ACCESS_TOKEN = "53a01f38b09c0463cb9e2b35b151beb127843bf3"
+
+def getBurstingPhrases():
+    query_params = {'access_token': ACCESS_TOKEN}
+
+    endpoint = "https://api-ssl.bitly.com/v3/realtime/bursting_phrases"
+    response = requests.get(endpoint, params = query_params)
+
+    data = json.loads(response.content)
+
+    phrases = []
+    
+    for item in data["data"]["phrases"]:
+        info = {}
+        info["phrase"] = item["phrase"]
+        info["urls"] = item["urls"]
+        phrases.append(info)
+    
+    for item in phrases:
+        pprint.pprint(item)
+
+if __name__ == '__main__':            
+    getBurstingPhrases()
+```
+Viewing data on current bursting phrases can be done by just printing the JSON response. However, in this example script, we create an empty list called `phrases` in which we nest the dictionary `info` containing only the `phrase` and `urls` key value pairs. This returns a list of bursting phrases as well as all the bitly links pointing to webpages containing those phrases and the visitors for each. 
 
 <a id="search"></a>Search all bitly links receiving clicks
-----------------------------------------------------------
-Endpoint: [/v3/search](http://dev.bitly.com/data_apis.html#v3_search)
+------------------------------------------------------------
+
+Bursting phrases may also be fed into our search API, which powers our serach engine [rt.ly](rt.ly), by using the [/v3/search](http://dev.bitly.com/data_apis.html#v3_search) endpoint and setting the `query` parameter to a phrase. You can also search normally and filter results by topic, social network, city, domain and language: 
+
+```python
+import requests
+import json
+import pprint
+
+ACCESS_TOKEN = "53a01f38b09c0463cb9e2b35b151beb127843bf3"
+
+query_params = {
+    'access_token': ACCESS_TOKEN,
+    'query': "food",
+	'cities': "us-ny-brooklyn",
+    'fields': "aggregate_link,title,url",
+    'limit': 10}
+        
+endpoint = "https://api-ssl.bitly.com/v3/search"
+response = requests.get(endpoint, params = query_params)
+    
+data = json.loads(response.content)
+
+pprint.pprint(data['data']['results'], indent = 3)
+```
+In the above script, we are searching for links to 10 pieces of content related to food being read by people in Brooklyn, NY and printing the `aggregate_link` (short url), `title` and `url` (long url) for each. A full list of parameters can found in the /v3/search documentation [here](http://dev.bitly.com/data_apis.html#v3_search).
 
 <a id="createbundle"></a>Create a bundle
 ----------------------------------------
