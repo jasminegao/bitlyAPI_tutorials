@@ -26,10 +26,8 @@ To shorten a link, you simply connect to the [/v3/shorten](http://dev.bitly.com/
 import requests
 import json
 
-ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
-
 query_ params = {
-	'access_token': ACCESS_TOKEN,
+	'access_token': settings.ACCESS_TOKEN,
 	'longUrl': "http://worrydream.com/LearnableProgramming/"}
 
 endpoint = "https://api-ssl.bitly.com/v3/shorten"
@@ -51,10 +49,8 @@ A webpage can be about food, technology, entertainment or just about anything. A
 import requests
 import json
 
-ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
-
 query_ params = {
-	'access_token': ACCESS_TOKEN,
+	'access_token': settings.ACCESS_TOKEN,
 	'link': "data['data']['url']"}
 
 endpoint = "https://api-ssl.bitly.com/v3/link/category"
@@ -75,10 +71,8 @@ Did you know you could view the stats for any bitly link by adding a plus sign (
 import requests
 import json
 
-ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
-
 query_params = {
-        'access_token': ACCESS_TOKEN,
+        'access_token': settings.ACCESS_TOKEN,
         'link': "http://bitly.com/RYYpZT",
         'unit': "minute",
         'units': 60}
@@ -103,10 +97,8 @@ import requests
 import json
 import pprint
 
-ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
-
 def getBurstingPhrases():
-    query_params = {'access_token': ACCESS_TOKEN}
+    query_params = {'access_token': settings.ACCESS_TOKEN}
 
     endpoint = "https://api-ssl.bitly.com/v3/realtime/bursting_phrases"
     response = requests.get(endpoint, params = query_params)
@@ -139,10 +131,8 @@ import requests
 import json
 import pprint
 
-ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
-
 query_params = {
-    'access_token': ACCESS_TOKEN,
+    'access_token': settings.ACCESS_TOKEN,
     'query': "food",
 	'cities': "us-ny-brooklyn",
     'fields': "aggregate_link,title,url",
@@ -166,10 +156,8 @@ import requests
 import json
 import pprint
 
-ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
-
 query_params = {
-    'access_token': ACCESS_TOKEN,
+    'access_token': settings.ACCESS_TOKEN,
 	'title': "Chipotle is great",
 	'description': "Only the best links to stuff about Chipotle",
 	'private': "false"}
@@ -191,10 +179,8 @@ import requests
 import json
 import pprint
 
-ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
-
 query_params = {
-    'access_token': ACCESS_TOKEN,
+    'access_token': settings.ACCESS_TOKEN,
 	'bundle_link': "http://bitly.com/bundles/bitlyapitutorials/1",
     'link': "http://thoughtcatalog.com/2012/how-to-hack-chipotle/"}
 	
