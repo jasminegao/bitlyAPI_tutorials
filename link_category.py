@@ -2,10 +2,8 @@ import requests
 import json
 import pprint
 
-ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
-
 query_params = {
-    'access_token': ACCESS_TOKEN,
+    'access_token': settings.ACCESS_TOKEN,
     'link': "http://worrydream.com/LearnableProgramming/"}
 
 endpoint = "https://api-ssl.bitly.com/v3/link/category"
