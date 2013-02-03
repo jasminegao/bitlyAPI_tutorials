@@ -1,11 +1,10 @@
 import pprint
 import requests
 import json
-
-ACCESS_TOKEN = "500752aa74ab91846753fc86c53f8e7cb27f5c81"
+import settings
 
 query_params = {
-    'access_token': ACCESS_TOKEN,
+    'access_token': settings.ACCESS_TOKEN,
     'query': "food",
     'cities': "us-ny-brooklyn",
     'fields': "aggregate_link,title,url",

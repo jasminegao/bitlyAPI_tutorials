@@ -1,7 +1,11 @@
 bitlyAPI_tutorials
 ===================
 
-The following are simple tutorials to help get you started on using bitly's APIs. For these tutorials we will be using a generic access token generated for the bitlyapitutorials account. To get your own access token, visit our [OAuth documentation](http://dev.bitly.com/authentication.html) for a walkthrough of the authentication process. 
+The following are simple tutorials to help get you started on using
+bitly's APIs. For these tutorials we will be using a generic access
+token generated for the bitlyapitutorials account. To get your own
+access token, [click here](https://bitly.com/a/oauth_apps) to generate
+one on bitly.com or visit our [OAuth documentation](http://dev.bitly.com/authentication.html) for a walkthrough of the authentication process. 
 
 Listed are tutorials to perform the following:
 
