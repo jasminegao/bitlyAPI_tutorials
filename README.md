@@ -191,4 +191,4 @@ data = json.loads(response.content)
 
 pprint.pprint(data['data']['bundle'], indent = 3)
 ```
-Here, the `bundle_link` is one of the return values you get after creating a bundle but can also be found via your browser's address bar. Additionally, in this example, the link to be added to the bundle is a long url but any bitly short url can be used as well. 
+Here, `bundle_link` is one of the return values you get after creating a bundle using the API, but it can also be found via your browser's address bar. Additionally, in this example, the link to be added to the bundle is a long url, however any bitly short url can be used as well. 
