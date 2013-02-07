@@ -1,6 +1,7 @@
 import requests
 import json
 import pprint
+import settings
 
 def getBurstingPhrases():
     query_params = {'access_token': settings.ACCESS_TOKEN}
