@@ -1,5 +1,6 @@
 import requests
 import json
+import settings
 
 query_params = {
     'access_token': settings.ACCESS_TOKEN,

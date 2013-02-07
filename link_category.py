@@ -1,6 +1,7 @@
 import requests
 import json
 import pprint
+import settings
 
 query_params = {
     'access_token': settings.ACCESS_TOKEN,
