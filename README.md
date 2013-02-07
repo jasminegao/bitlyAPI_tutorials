@@ -25,6 +25,7 @@ To shorten a link, you simply connect to the [/v3/shorten](http://dev.bitly.com/
 ```python
 import requests
 import json
+import settings
 
 query_ params = {
 	'access_token': settings.ACCESS_TOKEN,
@@ -48,6 +49,7 @@ A webpage can be about food, technology, entertainment or just about anything. A
 ```python
 import requests
 import json
+import settings
 
 query_ params = {
 	'access_token': settings.ACCESS_TOKEN,
@@ -70,6 +72,7 @@ Did you know you could view the stats for any bitly link by adding a plus sign (
 ```python
 import requests
 import json
+import settings
 
 query_params = {
         'access_token': settings.ACCESS_TOKEN,
@@ -95,6 +98,7 @@ When webpages containing the same phrase(s) receive uncharacteristically high cl
 ```python
 import requests
 import json
+import settings
 import pprint
 
 def getBurstingPhrases():
@@ -129,6 +133,7 @@ Bursting phrases may also be fed into our search API, which powers our search en
 ```python
 import requests
 import json
+import settings
 import pprint
 
 query_params = {
@@ -154,6 +159,7 @@ Bundles are great for organizing all of your saved bitly links into collections 
 ```python
 import requests
 import json
+import settings
 import pprint
 
 query_params = {
@@ -177,6 +183,7 @@ To add a link to your newly created bundle, simply use the [/v3/bundle/link_add]
 ```python
 import requests
 import json
+import settings
 import pprint
 
 query_params = {
