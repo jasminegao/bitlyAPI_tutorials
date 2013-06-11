@@ -10,17 +10,17 @@ def getBurstingPhrases():
     response = requests.get(endpoint, params = query_params)
 
     data = json.loads(response.content)
-
-    phrases = []
-    
-    for item in data["data"]["phrases"]:
-        info = {}
-        info["phrase"] = item["phrase"]
-        info["urls"] = item["urls"]
-        phrases.append(info)
-    
-    for item in phrases:
-        pprint.pprint(item)
-
+    pprint.pprint(data)
+#     phrases = []
+#     
+#     for item in data["data"]["phrases"]:
+#         info = {}
+#         info["phrase"] = item["phrase"]
+#         info["urls"] = item["urls"]
+#         phrases.append(info)
+#     
+#     for item in phrases:
+#         pprint.pprint(item)
+# 
 if __name__ == '__main__':            
     getBurstingPhrases()
