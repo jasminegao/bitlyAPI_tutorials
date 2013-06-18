@@ -4,7 +4,7 @@ import pprint
 import settings
 
 def getBurstingPhrases():
-    query_params = {'access_token': settings.ACCESS_TOKEN}
+    query_params = {'access_token': "your_access_token"}
 
     endpoint = "https://api-ssl.bitly.com/v3/realtime/bursting_phrases"
     response = requests.get(endpoint, params = query_params)

@@ -4,7 +4,7 @@ import json
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'query': "food",
     'cities': "us-ny-brooklyn",
     'fields': "aggregate_link,title,url",

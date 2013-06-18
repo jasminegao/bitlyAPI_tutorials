@@ -4,7 +4,7 @@ import pprint
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'link': "http://worrydream.com/LearnableProgramming/"}
 
 endpoint = "https://api-ssl.bitly.com/v3/link/category"

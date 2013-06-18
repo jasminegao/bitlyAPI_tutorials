@@ -2,7 +2,7 @@ bitlyAPI_tutorials
 ===================
 
 The following are simple tutorials to help get you started on using
-bitly's APIs. For these tutorials we will be using a generic access token generated for the bitlyapitutorials account. To get your own
+bitly's APIs. For these tutorials, you will need an
 access token, [click here](https://bitly.com/a/oauth_apps) to generate
 one or visit our [OAuth documentation](http://dev.bitly.com/authentication.html) for a walkthrough of the authentication process. 
 
@@ -27,7 +27,7 @@ import json
 import settings
 
 query_params = {
-	'access_token': settings.ACCESS_TOKEN,
+	'access_token': "your_access_token",
 	'longUrl': "http://worrydream.com/LearnableProgramming/"}
 
 endpoint = "https://api-ssl.bitly.com/v3/shorten"
@@ -51,7 +51,7 @@ import json
 import settings
 
 query_params = {
-	'access_token': settings.ACCESS_TOKEN,
+	'access_token': "your_access_token",
 	'link': "data['data']['url']"}
 
 endpoint = "https://api-ssl.bitly.com/v3/link/category"
@@ -74,7 +74,7 @@ import json
 import settings
 
 query_params = {
-        'access_token': settings.ACCESS_TOKEN,
+        'access_token': "your_access_token",
         'link': "http://bitly.com/RYYpZT",
         'unit': "minute",
         'units': 60}
@@ -101,7 +101,7 @@ import settings
 import pprint
 
 def getBurstingPhrases():
-    query_params = {'access_token': settings.ACCESS_TOKEN}
+    query_params = {'access_token': "your_access_token"}
 
     endpoint = "https://api-ssl.bitly.com/v3/realtime/bursting_phrases"
     response = requests.get(endpoint, params = query_params)
@@ -136,7 +136,7 @@ import settings
 import pprint
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
     'query': "food",
 	'cities': "us-ny-brooklyn",
     'fields': "aggregate_link,title,url",
@@ -162,7 +162,7 @@ import settings
 import pprint
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
 	'title': "Chipotle is great",
 	'description': "Only the best links to stuff about Chipotle",
 	'private': "false"}
@@ -186,7 +186,7 @@ import settings
 import pprint
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
 	'bundle_link': "http://bitly.com/bundles/bitlyapitutorials/1",
     'link': "http://thoughtcatalog.com/2012/how-to-hack-chipotle/"}
 	

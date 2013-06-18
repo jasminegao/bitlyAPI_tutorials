@@ -4,7 +4,7 @@ import pprint
 import settings
 
 query_params = {
-    'access_token': settings.ACCESS_TOKEN,
+    'access_token': "your_access_token",
 	'bundle_link': "http://bitly.com/bundles/bitlyapitutorials/1",
     'link': "http://thoughtcatalog.com/2012/how-to-hack-chipotle/"}
 	
